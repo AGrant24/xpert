@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto", sans-serif;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  background-image: url("../styles/img/bg.png");
+}
+
+.outer-container {
+  background-color: #f4f4f4;
+
+  background-image: url("../styles/img/bg.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  margin: 0;
+}
+
+.nav-container {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  margin-right: -10px;
+  margin-left: 0px;
+  padding-right: 10px;
+  overflow-x: hidden;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  padding-bottom: 15px;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 10px 0 10px;
+}
+
+h4 {
+  margin: 0;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="time"],
+input[type="date"] {
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #3b4866;
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  color: #f63d3d;
+  font-size: 10px;
+  line-height: 15px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translate(1000%, -45%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 60%;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 300px;    
+  }
+}
+
